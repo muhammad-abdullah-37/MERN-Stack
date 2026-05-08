@@ -1,8 +1,9 @@
-<!-- Exercise 01    
- HTML Document Initialization & Structural Setup
+Exercise 01    HTML Document Initialization & Structural Setup
+
 
 Objective
-Construct a syntactically valid HTML5 document from scratch, adhering to W3C standards. The document shall display a personal portfolio page with a browser tab title of 'My Portfolio' a primary heading rendering the developer's full name, and a professional summary paragraph of no fewer than two sentences.
+Construct a syntactically valid HTML5 document from scratch, adhering to W3C standards. The document shall display a personal portfolio page with a browser tab title of 'My Portfolio', a primary heading rendering the developer's full name, and a professional summary paragraph of no fewer than two sentences.
+
 Deliverables
 •	One (1) valid HTML5 file named index.html
 •	Correct DOCTYPE declaration, <html>, <head>, and <body> elements
@@ -10,17 +11,95 @@ Deliverables
 •	An <h1> heading with the developer's full name
 •	A <p> element containing a 2–3 sentence professional biography
 
-
 Technical Requirements
 •	Document must pass W3C Markup Validation with zero critical errors
 •	All tags must be properly nested and closed
 •	UTF-8 charset meta tag must be present in <head>
 •	File must render correctly in Google Chrome and Mozilla Firefox
 
-
 Acceptance Criteria
 •	Browser tab displays 'My Portfolio' as the page title
 •	Primary heading is visually prominent and semantically correct (H1)
 •	Professional summary is coherent and professionally worded
-•	No broken or unclosed tags identified during peer review -->
+•	No broken or unclosed tags identified during peer review
+==================================================================================================
 
+Exercise 02    Navigation Component — Internal & External Hyperlinking
+
+
+Objective
+Develop a fully functional navigation bar consisting of four anchor elements: Home, About, Projects, and Contact. The Home link shall reload the current document. The remaining three links shall use placeholder hrefs. Additionally, implement one external link that opens in a new browser context and one mailto link for direct email initiation.
+
+Deliverables
+•	A semantic navigation bar containing exactly four anchor elements
+•	One external hyperlink targeting https://www.google.com with target='_blank'
+•	One mailto anchor pre-configured with the developer's email address
+•	All links must be accessible and keyboard-navigable
+
+Technical Requirements
+•	Navigation must use <nav> semantic element as the parent container
+•	External links must include rel='noopener noreferrer' for security compliance
+•	All anchor elements must have descriptive, meaningful link text (no 'click here')
+•	mailto link must use the correct URI scheme: mailto:address@domain.com
+
+Acceptance Criteria
+•	Home link reloads the page without errors
+•	Google link opens in a new browser tab
+•	Clicking the email link launches the system's default email client
+•	All four navigation items are present and clickable
+
+===========================================================================================
+
+
+Exercise 03    Media Integration — Image Embedding & Accessibility Compliance
+
+Objective
+Embed a remotely hosted profile image within the HTML document in compliance with web accessibility standards. The image must include descriptive alternative text, be followed by a heading displaying the developer's name, and a paragraph denoting their professional designation.
+
+Deliverables
+•	One <img> element sourcing an image from a public URL
+•	A populated alt attribute providing a meaningful text description
+•	An <h2> heading below the image displaying the developer's full name
+•	A <p> element identifying the developer's role or professional title
+
+Technical Requirements
+•	Image src must reference a valid, publicly accessible URL
+•	alt text must be descriptive (not empty, not 'image', not a filename)
+•	Image must render without broken icon in both Chrome and Firefox
+•	Image dimensions should be constrained via width and/or height attributes to avoid layout overflow
+
+Acceptance Criteria
+•	Image loads and renders correctly within 3 seconds on a standard connection
+•	Screen reader reads the alt text in place of the image
+•	Name heading and professional title paragraph are present below the image
+•	No layout-breaking overflow or distortion of the image
+
+SECTION B
+The following exercises require trainees to apply HTML structural knowledge to component-level design tasks representative of real-world MERN stack front-end development. Proficiency in Section A exercises is assumed.
+=======================================================================================
+
+
+Exercise 04    Editorial Content Layout — Blog Post Page Architecture
+
+Objective
+Architect a structured, single-article blog post page that mirrors the content layout conventions used in production editorial platforms. The page must include a title, authorship metadata, body content, an inline media asset with caption, and a call-to-action link — all organized using semantically appropriate HTML elements.
+
+Deliverables
+•	A primary article heading (<h1>) serving as the blog post title
+•	A subheading (<h2> or <h3>) displaying the author's name and publication date
+•	A minimum of three (3) body content paragraphs
+•	One (1) inline image with a descriptive alt attribute
+•	A <p> element immediately below the image functioning as an image caption
+•	A 'Read More' anchor link positioned at the end of the article
+
+Technical Requirements
+•	The entire article must be wrapped inside an <article> semantic element
+•	Heading hierarchy must be logical: H1 for title, H2/H3 for metadata
+•	No heading levels may be skipped (e.g., H1 directly to H4 is non-compliant)
+•	The 'Read More' link href must be set to '#' as a valid placeholder
+
+Acceptance Criteria
+•	Page structure is scannable and logically ordered top to bottom
+•	Heading levels form a valid document outline
+•	Image and caption are visually and structurally associated
+•	All six deliverable components are present and validated
