@@ -1,0 +1,26 @@
+<!-- Exercise 01    
+ HTML Document Initialization & Structural Setup
+
+Objective
+Construct a syntactically valid HTML5 document from scratch, adhering to W3C standards. The document shall display a personal portfolio page with a browser tab title of 'My Portfolio' a primary heading rendering the developer's full name, and a professional summary paragraph of no fewer than two sentences.
+Deliverables
+•	One (1) valid HTML5 file named index.html
+•	Correct DOCTYPE declaration, <html>, <head>, and <body> elements
+•	A <title> tag set to 'My Portfolio'
+•	An <h1> heading with the developer's full name
+•	A <p> element containing a 2–3 sentence professional biography
+
+
+Technical Requirements
+•	Document must pass W3C Markup Validation with zero critical errors
+•	All tags must be properly nested and closed
+•	UTF-8 charset meta tag must be present in <head>
+•	File must render correctly in Google Chrome and Mozilla Firefox
+
+
+Acceptance Criteria
+•	Browser tab displays 'My Portfolio' as the page title
+•	Primary heading is visually prominent and semantically correct (H1)
+•	Professional summary is coherent and professionally worded
+•	No broken or unclosed tags identified during peer review -->
+
