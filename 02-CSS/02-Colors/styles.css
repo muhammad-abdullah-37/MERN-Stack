@@ -1,16 +1,19 @@
 body{
-  background-color : rosybrown;
+  background-color : rgb(112, 55, 55);
   font-family : Arial,sans-serif;
 }
 .business-card{
-  width:300px;
-  background-color:blue;
-  padding:20px;
+  width:400px;
+  height:300px;
+  background-color:rgb(24, 17, 18);
+  color:whitesmoke;
+  padding:10px;
   margin-top:100px;
   text-align:center;
   font-size:16px;
   margin-left:auto;
   margin-right:auto;
+  border-radius: 7px;
 }
 .profile-image{
   max-width:100%;
