@@ -6,16 +6,19 @@ body{
   background-color: white;
   width:600px;
   text-align:center;
+  border: 3px solid red;
+  margin: 50px;
 }
 .post-content{
   padding:20px;
 }
 .read-more:hover {
-    background-color: #1e3a8a;
+    background-color: #22a003;
     color: white;
 }
 a {
-  background-color:burlywood;
+  background-color:rgb(29, 23, 16);
+  color: whitesmoke;
   margin:20px;
   display:inline-block;
   border-radius:10px;
