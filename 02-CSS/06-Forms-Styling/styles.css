@@ -1,6 +1,7 @@
 body {
-  background-color: MidnightBlue;
+  background-color: rgb(8, 8, 83);
   color: whitesmoke;
+  font-family: sans-serif;
 }
 
 .container {
