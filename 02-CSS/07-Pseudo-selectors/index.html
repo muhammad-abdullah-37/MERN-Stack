@@ -1,52 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application Form</title>
-    <link rel='stylesheet' href='styles.css' />
+    <title>Professional Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class='container'>
-        <form>
-            <input type='text' id='name'/>
-            <label for='name'>Full Name: </label>
 
+<div class="container">
+    <form>
 
-            <input type='email' id='email'/>
-            <label for='email' >Email:</label>
+        <h1>Job Application Form</h1>
 
-            <select id='position'>
-                <option value='' > Select a Position </option>
-                <option value ='frontend'>Frontend Developer</option>
-                <option value ='backend'>Backend Developer</option>
-                <option value ='fullstack'>Full Stack Developer</option>
-                <option value ='uiux'>UI/UX Designer</option>
-                <option value ='qa'>QA Engineer</option>
+        <!-- Personal Information -->
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+        </div>
+
+        <!-- Job Position -->
+        <div class="form-group">
+            <label for="position">Position Applying For</label>
+            <select id="position" required>
+                <option value="">Select a Position</option>
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+                <option>Full Stack Developer</option>
+                <option>UI/UX Designer</option>
+                <option>QA Engineer</option>
             </select>
+        </div>
 
-            <fieldset class='radio-group'>
-            <input type='radio' name='availability' id='immediately'/>
-            <label for ='immediately' > Immediately Available </label>
+        <!-- Experience -->
+        <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" min="0" max="30" required>
+        </div>
 
-            <input type='radio' name='availability' id='2-weeks'/>
-            <label for ='2-weeks' > Available Within 2 Weeks</label>
+        <!-- Education -->
+        <div class="form-group">
+            <label for="education">Highest Education</label>
+            <select id="education" required>
+                <option value="">Select Education</option>
+                <option>Intermediate</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>PhD</option>
+            </select>
+        </div>
 
+        <!-- Availability -->
+        <fieldset class="radio-group">
+            <legend>Availability</legend>
 
-            <input type='radio' name='availability' id='1-month'/>
-            <label for ='1-month' > Available Within 1 Month</label>
+            <input type="radio" name="availability" id="immediately">
+            <label for="immediately">Immediately Available</label>
 
+            <input type="radio" name="availability" id="2-weeks">
+            <label for="2-weeks">Available Within 2 Weeks</label>
 
-            
-            <input type='radio' name='availability' id='not-available'/>
-            <label for ='not-available' > Not Currently Available</label>
-            
+            <input type="radio" name="availability" id="1-month">
+            <label for="1-month">Available Within 1 Month</label>
 
-            </fieldset>
+            <input type="radio" name="availability" id="not-available">
+            <label for="not-available">Not Currently Available</label>
+        </fieldset>
 
-            <textarea id='message'> </textarea>
-            <button type='submit'>Submit Form </button>
-        </form>
-    </div>
+        <!-- Skills -->
+        <fieldset class="checkbox-group">
+            <legend>Technical Skills</legend>
+
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="react">
+            <label for="react">React</label>
+
+            <input type="checkbox" id="node">
+            <label for="node">Node.js</label>
+        </fieldset>
+
+        <!-- Resume Upload -->
+        <div class="form-group">
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume">
+        </div>
+
+        <!-- Portfolio -->
+        <div class="form-group">
+            <label for="portfolio">Portfolio Website</label>
+            <input type="url" id="portfolio" placeholder="https://example.com">
+        </div>
+
+        <!-- Cover Letter -->
+        <div class="form-group">
+            <label for="message">Cover Letter</label>
+            <textarea id="message" rows="6"></textarea>
+        </div>
+
+        <!-- Terms -->
+        <div class="terms">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+</div>
+
 </body>
 </html>
