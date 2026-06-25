@@ -1,9 +1,13 @@
+body{
+  background-color: rgb(39, 35, 35); 
+  color: whitesmoke; 
+}
 h1 {
   text-align: center;
 }
 
 .container {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(83, 82, 82); */
   padding: 10px 0;
 }
 
