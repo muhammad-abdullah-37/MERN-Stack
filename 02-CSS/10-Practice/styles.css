@@ -1,53 +1,81 @@
-h1 {
-  text-align: center;
-  margin-bottom: 10px;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
 }
 
-.box {
-  max-height: 120px;
-  color: #000;
-  border: 1px solid #000;
-  display: flex;
-  flex: 0 0 150px;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  font-weight: bold;
-  font-size: 1.125rem;
-  border-radius: 5px;
-  order: 0; 
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1e3a8a;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 75%;
   height: 600px;
-  padding: 10px;
-  margin: 20px auto;
+  padding: 20px;
+  margin: 30px auto;
   align-content: space-evenly;
+  justify-content: center;
+  gap: 15px;
+
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.box {
+  max-height: 120px;
+  flex: 0 0 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+
+  order: 0;
 }
 
 .box1 {
-  background: #f16e79;
-  order: 1; 
+  background: #ff6b6b;
+  order: 1;
   flex-grow: 1;
 }
 
 .box2 {
   background: #f4a261;
-  order: 0; 
+  order: 0;
 }
 
 .box3 {
   background: #ffd166;
+  color: #333;
   order: 2;
-  flex-shrink: 3; 
+  flex-shrink: 3;
 }
 
 .box4 {
-  background: #4caf50;
-  order: 3; 
+  background: #43aa8b;
+  order: 3;
 }
 
 .box5 {
@@ -56,7 +84,7 @@ h1 {
 }
 
 .box6 {
-  background: #3f51b5;
+  background: #5e60ce;
   order: 5;
-  flex-grow:1;
+  flex-grow: 1;
 }
