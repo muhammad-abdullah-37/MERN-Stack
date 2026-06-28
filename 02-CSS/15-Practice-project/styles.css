@@ -206,3 +206,298 @@ tr.total td{
     font-weight:bold;
     font-size:1.05rem;
 }
+/* Ultra Wide Screens */
+@media (min-width:1600px){
+
+    section{
+        max-width:1200px;
+    }
+
+    body{
+        font-size:18px;
+    }
+
+    table caption{
+        font-size:1.9rem;
+    }
+
+    h1 .flex span:last-child{
+        font-size:2.7rem;
+    }
+
+}
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    section{
+        max-width:1100px;
+    }
+
+}
+
+/* Desktop */
+@media (max-width:1200px){
+
+    body{
+        padding:40px 25px;
+    }
+
+    section{
+        max-width:95%;
+    }
+
+    table{
+        min-width:700px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:992px){
+
+    body{
+        padding:35px 18px;
+    }
+
+    h1{
+        padding:28px;
+    }
+
+    h1 .flex span:last-child{
+        font-size:2rem;
+    }
+
+    h1 .flex span:first-child{
+        font-size:.85rem;
+    }
+
+    table caption{
+        font-size:1.45rem;
+    }
+
+    .table-wrap{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    table{
+        min-width:700px;
+    }
+
+    #years span{
+        width:90px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    body{
+        padding:20px 15px;
+    }
+
+    h1{
+        padding:24px;
+    }
+
+    h1 .flex{
+        gap:.6rem;
+    }
+
+    h1 .flex span:last-child{
+        font-size:1.8rem;
+    }
+
+    h1 .flex span:first-child{
+        letter-spacing:2px;
+    }
+
+    .table-wrap{
+        padding:18px;
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:650px;
+        margin:55px 0;
+    }
+
+    table caption{
+        font-size:1.3rem;
+    }
+
+    tbody th,
+    tbody td{
+        padding:12px;
+    }
+
+    .description{
+        font-size:.82rem;
+        line-height:1.5;
+        margin-right:0;
+    }
+
+    #years{
+        padding:14px 18px;
+    }
+
+    #years span{
+        width:70px;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:576px){
+
+    body{
+        padding:15px 10px;
+    }
+
+    h1{
+        padding:20px;
+    }
+
+    h1 .flex span:last-child{
+        font-size:1.5rem;
+    }
+
+    h1 .flex span:first-child{
+        font-size:.75rem;
+        letter-spacing:1px;
+    }
+
+    table{
+        min-width:620px;
+        font-size:.9rem;
+    }
+
+    table caption{
+        font-size:1.15rem;
+    }
+
+    tbody th,
+    tbody td{
+        padding:10px 8px;
+    }
+
+    .description{
+        font-size:.75rem;
+    }
+
+    #years{
+        padding:12px;
+        font-size:.9rem;
+    }
+
+    #years span{
+        width:60px;
+    }
+
+}
+
+/* Medium Phones */
+@media (max-width:480px){
+
+    body{
+        padding:10px 8px;
+    }
+
+    h1{
+        padding:18px;
+    }
+
+    h1 .flex span:last-child{
+        font-size:1.3rem;
+    }
+
+    h1 .flex span:first-child{
+        font-size:.68rem;
+    }
+
+    table{
+        min-width:600px;
+        font-size:.82rem;
+    }
+
+    tbody th,
+    tbody td{
+        padding:8px;
+    }
+
+    table caption{
+        font-size:1rem;
+    }
+
+    .description{
+        font-size:.68rem;
+        line-height:1.4;
+    }
+
+    #years{
+        font-size:.8rem;
+    }
+
+    #years span{
+        width:55px;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:375px){
+
+    body{
+        padding:8px 5px;
+    }
+
+    h1{
+        padding:16px;
+    }
+
+    h1 .flex span:last-child{
+        font-size:1.15rem;
+    }
+
+    h1 .flex span:first-child{
+        font-size:.6rem;
+    }
+
+    table{
+        min-width:580px;
+        font-size:.78rem;
+    }
+
+    tbody th,
+    tbody td{
+        padding:6px;
+    }
+
+    .description{
+        font-size:.65rem;
+    }
+
+    table caption{
+        font-size:.95rem;
+    }
+
+}
+
+/* Extra Small Phones */
+@media (max-width:320px){
+
+    table{
+        min-width:560px;
+    }
+
+    h1 .flex span:last-child{
+        font-size:1rem;
+    }
+
+    h1 .flex span:first-child{
+        font-size:.55rem;
+    }
+
+}
