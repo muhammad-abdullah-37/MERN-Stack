@@ -1,3 +1,6 @@
+/* ===========================================================
+   RESET
+=========================================================== */
 *,
 ::before,
 ::after {
@@ -8,88 +11,255 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* ===========================================================
+   BASE / THEME
+=========================================================== */
+:root {
+  --color-bg: rgb(14, 20, 27);
+  --color-bg-elevated: rgba(255, 255, 255, 0.04);
+  --color-text: linen;
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --color-accent: orangered;
+  --color-accent-soft: rgba(255, 69, 0, 0.15);
+  --color-accent-2: #00beef;
+  --color-accent-2-soft: rgba(0, 190, 239, 0.15);
+  --color-border: rgba(120, 120, 120, 0.35);
+  --shadow-soft: 0 1rem 3rem rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 2rem 5rem rgba(0, 0, 0, 0.45);
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.4s ease;
 }
 
 body {
-  font-family: 'Baskervville', serif;
-  color: linen;
-  background-color: rgb(20, 30, 40);
+  font-family: 'Baskervville', Georgia, 'Times New Roman', serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(255, 69, 0, 0.10), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(0, 190, 239, 0.08), transparent 40%);
+  background-attachment: fixed;
+  line-height: 1.6;
 }
 
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Anton', 'Arial Narrow', sans-serif;
+  letter-spacing: 1px;
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Segoe UI', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: linen;
+  color: var(--color-text);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 main {
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
-  row-gap: 3rem;
+  row-gap: 5rem;
+  padding-bottom: 8rem;
 }
 
 img {
   width: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 0.6rem;
+  filter: saturate(0.95) contrast(1.02);
+  transition: transform var(--transition-med), filter var(--transition-med);
+}
+
+/* Gentle zoom-on-hover gives the gallery a tactile, "designed" feel */
+.image-wrapper img:hover,
+.text-with-images img:hover {
+  transform: scale(1.025);
+  filter: saturate(1.05) contrast(1.05);
 }
 
 hr {
   margin: 1.5rem 0;
-  border: 1px solid rgba(120, 120, 120, 0.6);
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent
+  );
 }
 
+/* ===========================================================
+   HEADING / BYLINE ROW
+   This sits on a raised "card" surface — a soft-toned panel
+   that's visibly lighter than the page background, with a
+   shadow underneath it. That's what makes the page read as
+   "designed" rather than text floating on a flat backdrop.
+=========================================================== */
 .heading {
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1.5rem;
+  align-items: center;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 1.2rem;
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow-card);
+  margin-top: -6rem;
+  position: relative;
+  z-index: 2;
 }
 
 .text {
   grid-column: 2 / 3;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   letter-spacing: 0.6px;
   column-width: 25rem;
+  column-gap: 4rem;
   text-align: justify;
+  background: var(--color-bg-elevated);
+  border-radius: 1.2rem;
+  padding: 3.5rem 4rem;
+  box-shadow: var(--shadow-soft);
 }
 
+/* ===========================================================
+   HERO
+   This is the single biggest lever for "flat vs. designed."
+   It now takes real vertical space, has a dark gradient floor
+   so type is always readable over any image set behind it,
+   and the title is large enough to feel like a magazine cover
+   rather than a page heading.
+=========================================================== */
 .hero {
   grid-column: 1 / -1;
   position: relative;
+  min-height: 64vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  isolation: isolate;
+}
+
+/* Layered glow + directional gradient instead of a flat tint.
+   This is what gives the hero "depth" rather than just being
+   a colored rectangle. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 30%, var(--color-accent-soft), transparent 70%),
+    linear-gradient(180deg, rgba(14, 20, 27, 0.2) 0%, rgba(14, 20, 27, 0.85) 90%);
+  z-index: -1;
+}
+
+/* Faint oversized watermark text behind the title for editorial
+   texture — purely decorative. */
+.hero::after {
+  content: 'NEWSLETTER';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-family: 'Anton', sans-serif;
+  font-size: 16rem;
+  color: rgba(255, 255, 255, 0.025);
+  letter-spacing: 1rem;
+  white-space: nowrap;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero-title {
   text-align: center;
-  color: orangered;
-  font-size: 8rem;
+  color: var(--color-accent);
+  font-size: 9.5rem;
+  line-height: 1;
+  text-shadow: 0 0.6rem 3rem rgba(255, 69, 0, 0.55);
+  letter-spacing: 2px;
+  animation: fadeSlideUp 0.8s ease both;
+  max-width: 80rem;
 }
 
 .hero-subtitle {
-  font-size: 2.4rem;
-  color: orangered;
+  font-size: 2.6rem;
+  color: var(--color-text);
   text-align: center;
+  opacity: 0.85;
+  margin-top: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  animation: fadeSlideUp 0.8s ease 0.15s both;
 }
 
+/* Small accent rule under the subtitle — a classic editorial
+   device that visually "closes" the hero block */
+.hero-subtitle::after {
+  content: '';
+  display: block;
+  width: 6rem;
+  height: 0.3rem;
+  background: var(--color-accent-2);
+  margin: 2rem auto 0;
+  border-radius: 1rem;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================================================
+   AUTHOR / META
+=========================================================== */
 .author {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.author-name a {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .author-name a:hover {
   background-color: #306203;
+  color: #ffffff;
 }
 
 .publish-date {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
+  font-size: 1.6rem;
 }
 
+/* ===========================================================
+   SOCIAL ICONS
+=========================================================== */
 .social-icons {
   display: grid;
   font-size: 3rem;
@@ -97,35 +267,77 @@ hr {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   align-items: center;
+  justify-content: end;
 }
 
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.social-icons a:hover {
+  color: var(--color-accent-2);
+  transform: translateY(-3px);
+}
+
+/* ===========================================================
+   BODY COPY DETAILS
+=========================================================== */
 .first-paragraph::first-letter {
-  font-size: 6rem;
-  color: orangered;
+  font-size: 7.5rem;
+  color: var(--color-accent);
   float: left;
   margin-right: 1rem;
+  margin-top: 0.3rem;
+  line-height: 0.8;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 0 0.4rem 1.5rem rgba(255, 69, 0, 0.5);
 }
 
 .quote {
-  color: #00beef;
-  font-size: 2.4rem;
-  text-align: center;
+  color: var(--color-accent-2);
+  font-size: 2.6rem;
+  text-align: left;
   font-family: "Raleway", sans-serif;
+  position: relative;
+  padding: 3rem 4rem 3rem 5rem;
+  margin: 1rem 0 3rem;
+  font-style: italic;
+  line-height: 1.55;
+  background: var(--color-accent-2-soft);
+  border-left: 0.5rem solid var(--color-accent-2);
+  border-radius: 0 1.2rem 1.2rem 0;
 }
 
+/* Big decorative quotation mark instead of plain inline characters */
 .quote::before {
-  content: '" ';
+  font-family: Georgia, serif;
+  font-size: 7rem;
+  color: rgba(0, 190, 239, 0.3);
+  position: absolute;
+  line-height: 1;
+  content: '\201C';
+  top: 1rem;
+  left: 1.2rem;
 }
 
 .quote::after {
-  content: ' "';
+  content: '';
 }
 
+/* ===========================================================
+   TEXT + IMAGE COLUMNS
+=========================================================== */
 .text-with-images {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  column-gap: 3rem;
+  column-gap: 3.5rem;
   margin-bottom: 3rem;
+  background: var(--color-bg-elevated);
+  border-radius: 1.2rem;
+  padding: 3rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .lists {
@@ -135,12 +347,36 @@ hr {
 
 .lists li {
   margin-bottom: 1.5rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+/* Small accent marker instead of a default bullet */
+.lists li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--color-accent-2);
+  border-radius: 50%;
 }
 
 .list-title, .list-subtitle {
-  color: #00beef;
+  color: var(--color-accent-2);
 }
 
+.list-title {
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* ===========================================================
+   IMAGE GALLERY
+=========================================================== */
 .image-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -152,6 +388,15 @@ hr {
 .image-1, .image-3 {
   grid-column: 1 / -1;
 }
+
+.image-wrapper img,
+.text-with-images img {
+  box-shadow: var(--shadow-soft);
+}
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
 @media only screen and (max-width: 720px) {
   .image-wrapper {
     grid-template-columns: 1fr;
@@ -165,28 +410,50 @@ hr {
 }
 
 @media only screen and (max-width: 550px) {
+  .hero {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero::after {
+    font-size: 8rem;
+  }
+
   .hero-title {
     font-size: 6rem;
   }
-  
+
   .hero-subtitle,
   .author,
   .quote,
   .list-title {
     font-size: 1.8rem;
   }
-  
+
+  .heading,
+  .text,
+  .text-with-images {
+    padding: 2rem;
+  }
+
+  .heading {
+    margin-top: -3rem;
+  }
+
   .social-icons {
     font-size: 2rem;
   }
-
   .text {
     font-size: 1.6rem;
-  } 
+  }
 }
 
-@media only screen and (max-width: 420px){
-  .hero-title{
-    font-size:4.5rem;
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+
+  .hero::after {
+    font-size: 5.5rem;
   }
 }
