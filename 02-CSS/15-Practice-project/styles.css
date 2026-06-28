@@ -141,11 +141,13 @@ tbody th,body td{
 }
 
 tbody th{
+    width:calc(100% - 270px);
     text-align:left;
     font-weight:600;
 }
 
 tbody td{
+    width:90px;
     text-align:right;
 }
 
