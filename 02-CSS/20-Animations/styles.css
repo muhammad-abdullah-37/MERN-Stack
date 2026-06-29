@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000814;
+}
 .wheel {
     position: relative;
     width: min(500px, 80vw);
@@ -5,7 +13,6 @@
     border: 8px solid #333;
     border-radius: 50%;
     animation: wheel 10s linear infinite;
-    margin-left: 35%;
 }
 .line {
   background-color: black;
