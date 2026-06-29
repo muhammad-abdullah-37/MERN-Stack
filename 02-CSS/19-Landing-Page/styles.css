@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    padding-top:90px;
+    background:#f5f5f5;
+}
+
+/* Header */
+
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#222;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+}
+
+/* Logo */
+
+#header-img{
+    width:70px;
+    height:70px;
+}
+
+/* Navigation */
+
+#nav-bar{
+    display:flex;
+    gap:25px;
+}
+
+.nav-link{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.nav-link:hover{
+    color:gold;
+}
+
+/* Sections */
+
+section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+section h2{
+    margin-bottom:20px;
+}
+
+section p{
+    margin:10px 0;
+}
+
+/* Video */
+
+#video{
+    max-width:100%;
+}
+
+/* Form */
+
+#form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+#email{
+    width:300px;
+    padding:10px;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
+#submit{
+    padding:10px 20px;
+    background:#222;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#submit:hover{
+    background:#444;
+}
