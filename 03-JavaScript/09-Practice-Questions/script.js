@@ -64,3 +64,14 @@ function truncateString(string,number) {
   }
 }
 truncateString("Hello Word",5)
+
+function confirmEnding (originalString,checkerString){
+    const slicedString = checkerString.slice(0,checkerString.length)
+    const slicedIndex = slicedString.length
+    const targetindexOfOriginal = originalString.length-slicedIndex
+    if(originalString.includes(slicedString,targetindexOfOriginal)) {
+        return true
+    } else {
+        return false
+    }
+}
