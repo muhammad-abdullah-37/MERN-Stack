@@ -10,3 +10,15 @@ Instructions:
 7. Return the masked email from the function.
 8. Outside the function, declare an email variable, call the maskEmail function with it, and print the returned masked email to the console.
 */
+
+const email = "apple.pie@example.com";
+function maskEmail(email){
+  let endIndex = email.indexOf("@") - 1;
+  const targetString = email.slice(1,endIndex)
+  const numOfChars = email.slice(1,endIndex).length
+  const maskChars = targetString.replace(targetString,"*")
+  const maskedEmail = email.slice(0,1) + maskChars.repeat(numOfChars) + email.slice(endIndex);
+  return maskedEmail;
+}
+
+console.log(maskEmail(email))
