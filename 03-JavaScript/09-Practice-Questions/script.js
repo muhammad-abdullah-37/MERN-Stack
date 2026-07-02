@@ -52,3 +52,15 @@ Step-by-step Instructions:
    - The shortened string followed by `"..."` when the original string exceeds the specified length.
    - The original string when its length is within the specified limit.
 */
+
+function truncateString(string,number) {
+  if(string.length > number) {
+    const slicedString = string.slice(0,number);
+    const finalUpdatedString = slicedString + "..."
+    return finalUpdatedString;
+
+  } else {
+    return string
+  }
+}
+truncateString("Hello Word",5)
