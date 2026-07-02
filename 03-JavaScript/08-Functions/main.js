@@ -89,3 +89,35 @@ Step-by-step Instructions:
    indicating that the player should hold.
 8. Test the function by calling `cardCounter()` multiple times with different card values (numbers and face cards) and log the returned result to the console to verify that the card counting logic works correctly.
 */
+
+let count = 0;
+function cardCounter(card){
+    if (card > 2 && card < 10) {
+        Number(card)
+        console.log("Card is Number")
+    } else {
+        String(card)
+        console.log("Card is a string")
+    }
+    if(card >= 2 && card <= 6){
+        count += 1;
+    } else if (card >= 7 && card <= 9) {
+        count += 0;
+    } else if ([10,"J","Q","K","A"].includes(card)){
+        count -= 1;
+    } else {
+        console.log("Do Nothing")
+    }
+    console.log("Bsfore",count)
+    if(count > 0) {
+        console.log(`${count} Bet`)
+        return `${count} Bet`
+    } else if (count <= 0) {
+        console.log(`${count} Hold`)
+        return `${count} Hold`
+    } else {
+        console.log("Do Nothing")
+    }
+    console.log('Function is running')
+    console.log("After",count)
+}
