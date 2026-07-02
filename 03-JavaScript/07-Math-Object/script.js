@@ -15,3 +15,79 @@
 // Step 15: Log a message explaining how the Math.max() and Math.min() methods work.
 // Step 16: Create variables called maxNum and minNum using Math.max() and Math.min(), then log both results.
 // Step 17: Log the final farewell message to the console.
+
+
+// Step 1: 
+const botName = "MathBot";
+const greeting = `Hi there! My name is ${botName} and I am here to teach you about the Math object!`;
+console.log(greeting);
+
+// Step 2: 
+console.log(
+  "The Math.random() method returns a pseudo random number greater than or equal to 0 and less than 1."
+);
+
+// Step 3: 
+const randomNum = Math.random();
+console.log(randomNum);
+
+// Step 4: 
+console.log("Now, generate a random number between two values.");
+
+// Step 5: 
+const min = 1;
+const max = 100;
+
+// Step 6: 
+const randomNum2 = Math.random() * (max - min) + min;
+console.log(randomNum2);
+
+// Step 7: 
+console.log(
+  "The Math.floor() method rounds the value down to the nearest whole integer."
+);
+
+// Step 8: 
+const numRoundedDown = Math.floor(6.7);
+console.log(numRoundedDown);
+
+// Step 9: 
+console.log("Now, generate a random integer between two values.");
+
+// Step 10: 
+const randomInt = Math.floor(Math.random() * (max - min) + min);
+console.log(randomInt);
+
+// Step 11: 
+console.log(
+  "The Math.ceil() method rounds the value up to the nearest whole integer."
+);
+
+// Step 12: 
+const numRoundedUp = Math.ceil(3.2);
+console.log(numRoundedUp);
+
+// Step 13: 
+console.log(
+  "The Math.round() method rounds the value to the nearest whole integer."
+);
+
+// Step 14:
+const numRounded = Math.round(2.7);
+console.log(numRounded);
+const numRounded2 = Math.round(11.2);
+console.log(numRounded2);
+
+// Step 15: 
+console.log(
+  "The Math.max() and Math.min() methods are used to get the maximum and minimum number from a range."
+);
+
+// Step 16: 
+const maxNum = Math.max(3, 125, 55, 24);
+console.log(maxNum);
+const minNum = Math.min(6, 90, 14, 90, 2);
+console.log(minNum);
+
+// Step 17: 
+console.log("It was fun learning about the different Math methods with you!");
