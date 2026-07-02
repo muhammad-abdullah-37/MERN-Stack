@@ -67,3 +67,25 @@ console.log(duplexLoanMsg);
 console.log(condoLoanMsg);
 console.log(carLoanMsg);
 console.log(noLoanMsg);
+
+
+/* 
+Question 3
+Step-by-step Instructions:
+1. Declare a global variable named `count` and initialize it to `0`. This variable will keep track of the running card count.
+2. Create a function named `cardCounter` that accepts one parameter called `card`.
+3. Inside the function, first determine whether the card is a number (between 3 and 9) or a face card/string (such as "J", "Q", "K", or "A"), and log an appropriate message to the console.
+4. Check the value of the card:
+   - If the card is between 2 and 6 (inclusive), increase `count` by 1.
+   - If the card is between 7 and 9 (inclusive), leave `count` unchanged.
+   - If the card is 10, "J", "Q", "K", or "A", decrease `count` by 1.
+   - If the card does not match any valid value, log "Do Nothing".
+5. Display the current value of `count` before making the betting decision.
+6. If `count` is greater than 0, return a string in the format:
+   "<count> Bet"
+   indicating that the player should bet.
+7. If `count` is less than or equal to 0, return a string in the format:
+   "<count> Hold"
+   indicating that the player should hold.
+8. Test the function by calling `cardCounter()` multiple times with different card values (numbers and face cards) and log the returned result to the console to verify that the card counting logic works correctly.
+*/
