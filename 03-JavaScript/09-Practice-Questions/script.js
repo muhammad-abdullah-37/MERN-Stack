@@ -13,3 +13,22 @@ Step-by-step Instructions:
 6. Outside the function, call the `isLeapYear()` function by passing the `year` variable as an argument and store the returned result in a variable named `result`.
 7. Log the value of `result` to the console to verify whether the given year is a leap year or not.
 */
+
+const year = 1900;
+function isLeapYear(number){
+    if(number % 4 == 0) {
+        if (number % 100 == 0) {
+            if (number % 400 == 0) {
+                return `${number} is a leap year.`
+            } else {
+                return `${number} is not a leap year.`
+            }
+        } else {
+            return `${number} is a leap year.`
+        }
+    } else {
+        return `${number} is not a leap year.`
+    }
+}
+const result =  isLeapYear(year)
+console.log(result)
