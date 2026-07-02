@@ -32,3 +32,23 @@ function isLeapYear(number){
 }
 const result =  isLeapYear(year)
 console.log(result)
+
+
+/* 
+Question 2
+Step-by-step Instructions:
+1. Create a function named `truncateString` that accepts two parameters:
+   - `string` (the text to be shortened)
+   - `number` (the maximum number of characters to keep)
+2. Inside the function, check whether the length of the string is greater than the given number.
+3. If the string is longer than the specified number:
+   - Use the `slice()` method to extract the first `number` characters.
+   - Store the sliced portion in a new variable.
+   - Append `"..."` to the end of the sliced string.
+   - Return the updated truncated string.
+4. If the string length is less than or equal to the specified number, simply return the original string without making any changes.
+5. Outside the function, call `truncateString()` by passing a sample string and a maximum length value.
+6. Verify that the function returns:
+   - The shortened string followed by `"..."` when the original string exceeds the specified length.
+   - The original string when its length is within the specified limit.
+*/
