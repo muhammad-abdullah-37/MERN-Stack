@@ -22,3 +22,18 @@ function maskEmail(email){
 }
 
 console.log(maskEmail(email))
+
+
+
+/* Question 2
+Step-by-step Instructions:
+
+1. Declare variables to store the minimum income and minimum credit score required for duplex, condo, and car loans.
+2. Create a function named getLoanMessage that accepts annualIncome and creditScore as parameters.
+3. Inside the function, first check if the applicant qualifies for a duplex loan by comparing the annual income and credit score with the duplex requirements. If they do, return the duplex loan message.
+4. If the applicant does not qualify for a duplex loan, check if they qualify for a condo loan. If they do, return the condo loan message.
+5. If the applicant does not qualify for a condo loan, check if they qualify for a car loan. If they do, return the car loan message.
+6. If none of the loan requirements are met, return a message indicating that the applicant does not qualify for any loans.
+7. Outside the function, create variables that call getLoanMessage() with different income and credit score values to test each possible outcome.
+8. Log each returned message to the console to verify that the function works correctly.
+*/
