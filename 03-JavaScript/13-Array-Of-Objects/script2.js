@@ -19,13 +19,10 @@ const recordCollection = {
 };
 function updateRecords(records,id,prop,value){
   if(value === "") {
-      console.log("Second condition======")
     delete records[id][prop];
   } else if (prop !== "tracks" && value !== ""){
-      console.log("Third condition======")
       records[id][prop]= value;
   } else if (prop === "tracks" && value !== "" && records[id][prop] === undefined) {
-      console.log("Fourth condition+++++++++++++++++++++++++++")
       records[id][prop] = []
       records[id][prop].push(value)
   }else if (prop === "tracks" && value !== "") {
@@ -37,10 +34,10 @@ function updateRecords(records,id,prop,value){
   return records
 }
 
-updateRecords(recordCollection, 5439, "artist", "ABBA")
-updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
-updateRecords(recordCollection, 2548, "artist", "")
-updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")
-updateRecords(recordCollection, 2468, "tracks", "Free")
-updateRecords(recordCollection, 2548, "tracks", "")
-updateRecords(recordCollection, 1245, "albumTitle", "Riptide")
+console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
+console.log(updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me"));
+console.log(updateRecords(recordCollection, 2548, "artist", ""));
+console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"));
+console.log(updateRecords(recordCollection, 2468, "tracks", "Free"));
+console.log(updateRecords(recordCollection, 2548, "tracks", ""));
+console.log(updateRecords(recordCollection, 1245, "albumTitle", "Riptide"));
