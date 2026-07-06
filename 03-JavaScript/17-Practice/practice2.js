@@ -10,3 +10,6 @@ function mutation(array) {
 
   return true;
 }
+console.log(mutation(["hello","Hello"])); // should be true
+console.log(mutation(["Muhammad","Abdullah"]));  // should be false
+console.log(mutation(["Abdullah","Abdullah"])); // should be true
