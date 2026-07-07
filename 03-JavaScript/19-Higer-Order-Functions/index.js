@@ -85,3 +85,4 @@ console.log("\nTotal number of pages for all library books:\n");
 function getTotalPages(books) {
   return books.reduce((total, book) => total + book.pages, 0);
 }
+console.log(getTotalPages(library));
