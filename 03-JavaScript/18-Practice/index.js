@@ -44,3 +44,7 @@ function lookUpProfile(name, property) {
   // No contact found after checking all contacts
   return "No such contact";
 }
+console.log(lookUpProfile("Kristian", "lastName")); // Vos
+console.log(lookUpProfile("Sherlock", "likes"));    // ["Intriguing Cases", "Violin"]
+console.log(lookUpProfile("Bob", "number"));        // No such contact
+console.log(lookUpProfile("Akira", "address"));     // No such property
