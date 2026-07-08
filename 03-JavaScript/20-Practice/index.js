@@ -68,4 +68,4 @@ books.forEach( (book) => {
     filteredBooks.push(book)
   }
 })
-filteredBooks.sort(sortByYear)
+console.log(filteredBooks.sort(sortByYear));
