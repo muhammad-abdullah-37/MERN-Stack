@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real Time Character Counter</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Character Counter</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Real Time Character Counter</h1>
+    <main class="container">
 
-    <textarea
-      id="text-input"
-      placeholder="Start typing here..."
-    ></textarea>
+        <div class="header">
 
-    <p id="char-count">Character Count: 0/50</p>
-  </div>
+            <h1>Real-Time Character Counter</h1>
 
-  <script src="script.js"></script>
+            <p class="subtitle">
+                Keep track of your writing instantly with a beautiful live character counter.
+            </p>
+
+        </div>
+
+        <textarea
+            id="text-input"
+            maxlength="50"
+            placeholder="Start typing something amazing..."
+        ></textarea>
+
+        <div class="bottom-section">
+
+            <div class="counter-wrapper">
+
+                <p id="char-count">
+                    0 / 50 Characters
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
