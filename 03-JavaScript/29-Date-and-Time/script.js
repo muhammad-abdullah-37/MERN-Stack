@@ -5,6 +5,7 @@ function formatDateMMDDYYYY(date){
   const formatedDate = date.toLocaleDateString('en-US');
   return `Formatted Date (MM/DD/YYYY): ${formatedDate}`
 }
+console.log(formatDateMMDDYYYY(currentDate))
 
 function formatDateLong(date){
   const formattedDate = date.toLocaleDateString('en-US',{
@@ -14,3 +15,5 @@ function formatDateLong(date){
   })
   return `Formatted Date (Month Day, Year): ${formattedDate}`
 }
+
+console.log(formatDateLong(currentDate));
